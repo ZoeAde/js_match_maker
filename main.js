@@ -12,25 +12,25 @@ Phone Number: 415-514-6584
 City: Boulder
 */
 function numStudents () {
-  var number = prompt("How Many Students Are Learning Javascript?");
+  var number = prompt("How many students are learning javascript?");
   console.log(number);
   return number;
 };
-studentsArray = [];
+
 //{studentName: , studentPhone: , studentCity: }
 
-for (var i = 0; i <= numStudents; i++) {
+var studentsArray = [];
 function studentInfo () {
-  var studentName = prompt("What is the name of student " + [i+1] + "?");
-  console.log(studentName);
-  var studentPhone = prompt("What is the phone number of student " + [i+1] + "?(ex. XXX-XXX-XXXX)");
-  console.log(studentPhone);
-  var studentCity = prompt("What city is student " + [i +1] + "from?");
-  console.log(studentCity);
-  studentsArray.push({studentName, studentPhone, studentCity});
+
+  for (var i = 1; i <= numStudents; i++) {
+    var studentName = prompt("What is the name of student " + [i + 1] + "?");
+    var studentPhone = prompt("What is the phone number of student " + [i + 1] + "?(ex. XXX-XXX-XXXX)");
+    var studentCity = prompt("What city is student " + [i + 1] + "from?");
+    studentsArray.push({studentName, studentPhone, studentCity});
 }
+console.log(studentsArray)
+return studentsArray;
 };
 
 numStudents();
 studentInfo();
-console.log(studentsArray);
