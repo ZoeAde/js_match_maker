@@ -11,18 +11,19 @@ Name: Michael Herman
 Phone Number: 415-514-6584
 City: Boulder
 */
+
+
+//students
 function numStudents () {
-  var number = prompt("How many students are learning javascript?");
+  var number = prompt("How many students are learning JavaScript?");
   console.log(number);
   return number;
 };
-
 //{studentName: , studentPhone: , studentCity: }
-
 var studentsArray = [];
 function studentInfo () {
 
-  for (var i = 1; i <= numStudents; i++) {
+while (i <= numStudents) {
     var studentName = prompt("What is the name of student " + [i + 1] + "?");
     var studentPhone = prompt("What is the phone number of student " + [i + 1] + "?(ex. XXX-XXX-XXXX)");
     var studentCity = prompt("What city is student " + [i + 1] + "from?");
@@ -31,6 +32,16 @@ function studentInfo () {
 console.log(studentsArray)
 return studentsArray;
 };
+
+
+//mentors
+
+function numMentors () {
+  var number = prompt("How many mentors are teaching JavaScript?");
+  console.log(number);
+  return number;
+};
+
 
 numStudents();
 studentInfo();
