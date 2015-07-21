@@ -1,47 +1,52 @@
-console.log("sanity check!")
-/* 1) Ask (prompt) the user for the total number of students learning JavaScript
-2) For each student, ask the user for their name, phone number, and city.
-3) Create an object for each person.
-4)Add each object to an array.
-BONUS: add validation.
-Repeat steps 1 and 2 for mentors. Create a new array of objects. You should now have two arrays - one for students, the other for mentors.
-Print (alert) the total number of students, the number of mentors, and each person nicely formatted like so:
-
-Name: Michael Herman
-Phone Number: 415-514-6584
-City: Boulder
-*/
-
-
 //students
+var studentArray = [];
+var totalStudents = numStudents();
+
 function numStudents () {
   var number = prompt("How many students are learning JavaScript?");
-  console.log(number);
   return number;
-};
-//{studentName: , studentPhone: , studentCity: }
-var studentsArray = [];
-function studentInfo () {
-
-while (i <= numStudents) {
-    var studentName = prompt("What is the name of student " + [i + 1] + "?");
-    var studentPhone = prompt("What is the phone number of student " + [i + 1] + "?(ex. XXX-XXX-XXXX)");
-    var studentCity = prompt("What city is student " + [i + 1] + "from?");
-    studentsArray.push({studentName, studentPhone, studentCity});
 }
-console.log(studentsArray)
-return studentsArray;
-};
 
+function addStudents(students) {
+  for (var i = 1; i <= students; i++) {
+    var studentName = prompt("What is the name of student " + [i] + "?");
+      if (studentName !== string) {
+        prompt("Please enter a valid name.");
+      }
+    var studentPhone = prompt("What is the phone number of student " + [i] + "?(ex. XXX-XXX-XXXX)");
+      if (studentphone.length !== 12) {
+        prompt("Please enter a valid phone number.");
+      }
+    var studentCity = prompt("What city is student " + [i] + " from?");
+    studentArray.push({name: studentName, phone: studentPhone, city: studentCity});
+    }
+   return studentArray;
+}
+
+console.log(totalStudents);
+console.log(addStudents(totalStudents));
 
 //mentors
+var mentorArray = [];
+var totalMentors = numMentors();
 
 function numMentors () {
   var number = prompt("How many mentors are teaching JavaScript?");
-  console.log(number);
   return number;
-};
+}
+
+function addMentors(mentors) {
+  for (var i = 1; i <= mentors; i++) {
+    var mentorName = prompt("What is the name of mentor " + [i] + "?");
+    var mentorPhone = prompt("What is the phone number of mentor " + [i] + "?(ex. XXX-XXX-XXXX)");
+    var mentorCity = prompt("What city is mentor " + [i] + " from?");
+    mentorArray.push({name: mentorName, phone: mentorPhone, city: mentorCity});
+    }
+   return mentorArray;
+}
+
+console.log(totalMentors);
+console.log(addMentors(totalMentors));
 
 
-numStudents();
-studentInfo();
+
