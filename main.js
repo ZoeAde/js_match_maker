@@ -1,4 +1,4 @@
-//students
+// //students
 var studentArray = [];
 var totalStudents = numStudents();
 
@@ -23,10 +23,9 @@ function addStudents(students) {
    return studentArray;
 }
 
-console.log(totalStudents);
-console.log(addStudents(totalStudents));
+var allStudents = addStudents(totalStudents);
 
-//mentors
+// //mentors
 var mentorArray = [];
 var totalMentors = numMentors();
 
@@ -45,28 +44,7 @@ function addMentors(mentors) {
    return mentorArray;
 }
 
-console.log(totalMentors);
-console.log(addMentors(totalMentors));
-
-
-// var allStudents = function() {
-//   var totalStudents = [];
-//   for (var i = 0; i < studentArray.length; i++) {
-//     totalStudents += studentArray[i];
-//     console.log(totalStudents);
-//   }
-// };
-
-// var allMentors = function() {
-//   var totalMentors = [];
-//   for (var i = 0; i < mentorArray.length; i++) {
-//     totalMentors = mentorArray[i];
-//     console.log(mentorArray[i]);
-//   }
-// };
-
-
-
+var allMentors = addMentors(totalMentors);
 
 
 
