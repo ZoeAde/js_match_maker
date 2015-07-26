@@ -10,13 +10,13 @@ function numStudents () {
 function addStudents(students) {
   for (var i = 1; i <= students; i++) {
     var studentName = prompt("What is the name of student " + [i] + "?");
-      if (studentName !== string) {
-        prompt("Please enter a valid name.");
-      }
+      // if (studentName !== 'string') {
+      //   prompt("Please enter a valid name.");
+      // }
     var studentPhone = prompt("What is the phone number of student " + [i] + "?(ex. XXX-XXX-XXXX)");
-      if (studentphone.length !== 12) {
-        prompt("Please enter a valid phone number.");
-      }
+      // if (studentPhone.length !== 12) {
+      //   prompt("Please enter a valid phone number.");
+      // }
     var studentCity = prompt("What city is student " + [i] + " from?");
     studentArray.push({name: studentName, phone: studentPhone, city: studentCity});
     }
@@ -47,6 +47,33 @@ function addMentors(mentors) {
 
 console.log(totalMentors);
 console.log(addMentors(totalMentors));
+
+
+// var allStudents = function() {
+//   var totalStudents = [];
+//   for (var i = 0; i < studentArray.length; i++) {
+//     totalStudents += studentArray[i];
+//     console.log(totalStudents);
+//   }
+// };
+
+// var allMentors = function() {
+//   var totalMentors = [];
+//   for (var i = 0; i < mentorArray.length; i++) {
+//     totalMentors = mentorArray[i];
+//     console.log(mentorArray[i]);
+//   }
+// };
+
+
+
+
+
+
+
+
+
+
 
 
 
