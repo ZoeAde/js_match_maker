@@ -1,16 +1,6 @@
 var getStudent = document.getElementById("students")[1];
 
 
-for (var i = 0; i < totalStudents; i++) {
-    var ul = document.createElement('ul');
-    document.body.appendChild(ul);
-    test(name);
-    test(phone);
-    test(city);
-  }
-
-
-
   //     for (var i = 0; i < totalStudents; i++) {
   //       var li = document.createElement('li');
   //       li.innerHTML = studentArray[i].name;
@@ -22,16 +12,27 @@ for (var i = 0; i < totalStudents; i++) {
   //     }
   // }
 
-
-
-
-
 function test(arrayValue) {
-  for (var i = 0; i < totalStudents; i++) {
-    var li = document.createElement('li');
-    li.innerHTML = studentArray[i].arrayValue;
-    ul.appendChild(li);
-}
+  console.log(studentArray);
+  for (var i = 0; i < arrayValue.length; i++) {
+    var h3 = document.createElement('h3');
+    h3.innerHTML = "Student " + [i+1];
+    document.body.appendChild(h3);
+    for (key in arrayValue[i]) {
+      var p = document.createElement('p');
+      console.log(arrayValue[i][key])
+      p.innerHTML = arrayValue[i][key];
+      document.body.appendChild(p);
+    };
+
+    // var li = document.createElement('li');
+    // li.innerHTML = arrayValue[0][i];
+    // ul.appendChild(li);
+  }
 };
+
+test(studentArray);
+
+
 
 //"city: " + studentArray[0].city

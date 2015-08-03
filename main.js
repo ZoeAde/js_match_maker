@@ -1,5 +1,5 @@
 // //students
-var studentArray = [];
+var studentArray = {};
 var totalStudents = parseInt(numStudents());
 
 function numStudents () {
