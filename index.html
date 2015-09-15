@@ -3,12 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <title>Match Maker</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+  <div class="container">
+    <div class="row">
+      <h1>Student-Mentor Database</h1>
+    </div>
+    <div class="row dropdown">
+
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Add New Person</h2>
+        <form role="form">
+          <div class="form-group">
+            <label>Category</label>
+            <br>
+            <select class="btn" id="category">
+              <option value="student">Student</option>
+              <option value="mentor">Mentor</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="text">Name</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+            <label for="text">Phone Number</label>
+            <input type="text" class="form-control" id="number">
+          </div>
+          <br>
+          <button type="submit" class="btn btn-default">Add</button>
+        </form>
+      </div>
+      <div class="col-md-6" id="studentSection">
+        <h2>Students</h2>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <th>Name</th>
+            <th>Phone</th>
+          </thead>
+          <tbody id="studentTableBody">
+            <tr>
+      <!-- student names appended here -->
+            </tr>
+            <tr>
+      <!-- student numbers appended here -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6" id="mentorSection">
+        <h2>Mentors</h2>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <th>Name</th>
+            <th>Phone</th>
+          </thead>
+          <tbody id="mentorTableBody">
+            <tr>
+      <!-- mentor names appended here -->
+            </tr>
+            <tr>
+      <!-- mentor numbers appended here -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
   <div>
     <p id="students"></p>
   </div>
-
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="main.js"></script>
   <script src="dom.js"></script>
 </body>
